@@ -9,7 +9,7 @@ import { Todo } from '../models/Todo.model';
 })
 export class TodosComponent implements OnInit {
   todos: Todo[] = [];
-  @Input() title: string = '';
+  @Input() title: string = 'Todos';
   constructor(private todoService: TodoService) {}
 
   ngOnInit(): void {

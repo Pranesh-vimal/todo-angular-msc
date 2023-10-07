@@ -18,7 +18,12 @@
     {{ todo["id"] }}
   </span>
   {{ todo["title"] }}
-
+  <button
+    class="btn btn-primary btn-sm float-end mx-2"
+    (click)="navigateTodoView()"
+  >
+    View
+  </button>
   <button class="btn btn-danger btn-sm float-end" (click)="deleteTodoEvent()">
     Delete
   </button>
