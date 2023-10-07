@@ -1,1 +1,25 @@
-<p>todo works!</p>
+<!-- <ng-container>
+  <th scope="row">{{ todo["id"] }}</th>
+  <td>{{ todo["title"] }}</td>
+  <td
+    [class.text-success]="todo['completed']"
+    [ngClass]="{ 'text-danger': !todo['completed'] }"
+  >
+    {{ todo["completed"] ? "Completed" : "Not completed" }}
+  </td>
+</ng-container> -->
+
+<li
+  class="list-group-item"
+  [class.text-success]="todo['completed']"
+  [ngClass]="{ 'text-danger': !todo['completed'] }"
+>
+  <span class="badge bg-primary rounded-pill float-start me-3">
+    {{ todo["id"] }}
+  </span>
+  {{ todo["title"] }}
+
+  <button class="btn btn-danger btn-sm float-end" (click)="deleteTodoEvent()">
+    Delete
+  </button>
+</li>
